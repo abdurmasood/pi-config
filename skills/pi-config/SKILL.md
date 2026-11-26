@@ -39,7 +39,7 @@ Rules:
 - Add or update a test in `tests/<name>.test.ts` for non-trivial logic. Tests use plain `node:assert` with mocked `pi`/`ctx` objects; see the existing tests.
 - Verify with `./scripts/check.sh` (type-checks against the installed pi version and runs the tests).
 - Tell the user to run `/reload` in pi.
-- Update the feature list in `README.md` when a user-visible feature or key changes.
+- Update `README.md` when a user-visible feature or key changes. If an extension's look changes (or a new visual feature is added), update `scripts/previews.ts` and run `./scripts/previews.sh` to regenerate the `docs/*.svg` images.
 - Commit with a clear message. Push only when the user asks.
 
 ## 3. User install: never edit pi's hidden clone

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="746" height="400" viewBox="0 0 746 400">
+<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:14px;white-space:pre}</style>
+<rect width="746" height="400" rx="10" fill="#000000" stroke="#2a2a2a"/>
+<path d="M0 10a10 10 0 0 1 10-10h726a10 10 0 0 1 10 10v24h-746z" fill="#121212"/>
+<circle cx="18" cy="17" r="5.5" fill="#ff5f57"/><circle cx="36" cy="17" r="5.5" fill="#febc2e"/><circle cx="54" cy="17" r="5.5" fill="#28c840"/>
+<text x="373" y="22" text-anchor="middle" style="font-size:12px" fill="#767676">⇧Tab  ask mode</text>
+<rect x="12" y="52" width="722" height="22" fill="#1f0f0f"/>
+<text y="69"><tspan x="20.0" fill="#ffffff">edit </tspan><tspan x="62.0" fill="#7dd3fc">src/app.ts</tspan></text>
+<rect x="12" y="74" width="722" height="22" fill="#1f0f0f"/>
+<text y="91"><tspan x="20.0" fill="#f28b82">Ask mode: `edit` is disabled. Turn it off with shift+tab or /ask to make changes.</tspan></text>
+<rect x="12" y="106" width="722" height="22" fill="#1f0f0f"/>
+<text y="123"><tspan x="20.0" fill="#ffffff">$ </tspan><tspan x="36.8" fill="#e0e0e0">rm -rf dist</tspan></text>
+<rect x="12" y="128" width="722" height="22" fill="#1f0f0f"/>
+<text y="145"><tspan x="20.0" fill="#f28b82">Ask mode: `rm` modifies files or system state. Turn it off with shift+tab or /ask</tspan></text>
+<rect x="12" y="150" width="722" height="22" fill="#1f0f0f"/>
+<text y="167"><tspan x="20.0" fill="#f28b82">to make changes.</tspan></text>
+<rect x="12" y="182" width="722" height="22" fill="#0e1a12"/>
+<text y="199"><tspan x="20.0" fill="#ffffff">$ </tspan><tspan x="36.8" fill="#e0e0e0">git log --oneline -2</tspan></text>
+<rect x="12" y="204" width="722" height="22" fill="#0e1a12"/>
+<text y="221"><tspan x="20.0" fill="#9e9e9e">2a35f08 Minimal README</tspan></text>
+<rect x="12" y="226" width="722" height="22" fill="#0e1a12"/>
+<text y="243"><tspan x="20.0" fill="#9e9e9e">3d396a6 Initial pi-config</tspan></text>
+<text y="275"><tspan x="20.0" fill="#f2d48b">Ask mode: `pnpm test` isn't a known read-only command</tspan></text>
+<text y="297"><tspan x="20.0" fill="#e0e0e0">  pnpm test</tspan></text>
+<text y="319"><tspan x="20.0" fill="#7dd3fc">→ Run once</tspan></text>
+<text y="341"><tspan x="20.0" fill="#9e9e9e">  Block</tspan></text>
+<text y="377"><tspan x="20.0" fill="#9e9e9e">pnp</tspan><tspan x="45.2" fill="#767676"> · </tspan><tspan x="70.4" fill="#767676">main</tspan><tspan x="104.0" fill="#767676"> · </tspan><tspan x="129.2" fill="#f2d48b">◉ ask</tspan><tspan x="473.6" fill="#767676">claude-opus-5-5</tspan><tspan x="599.6" fill="#767676"> · </tspan><tspan x="624.8" fill="#c8c8c8">high</tspan><tspan x="683.6" fill="#767676">◔ 23%</tspan></text>
+</svg>

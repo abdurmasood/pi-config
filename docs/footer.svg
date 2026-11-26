@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="746" height="222" viewBox="0 0 746 222">
+<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:14px;white-space:pre}</style>
+<rect width="746" height="222" rx="10" fill="#000000" stroke="#2a2a2a"/>
+<path d="M0 10a10 10 0 0 1 10-10h726a10 10 0 0 1 10 10v24h-746z" fill="#121212"/>
+<circle cx="18" cy="17" r="5.5" fill="#ff5f57"/><circle cx="36" cy="17" r="5.5" fill="#febc2e"/><circle cx="54" cy="17" r="5.5" fill="#28c840"/>
+<text x="373" y="22" text-anchor="middle" style="font-size:12px" fill="#767676">context footer</text>
+<text y="69"><tspan x="20.0" fill="#767676">under 50%</tspan></text>
+<text y="91"><tspan x="20.0" fill="#9e9e9e">pnp</tspan><tspan x="45.2" fill="#767676"> · </tspan><tspan x="70.4" fill="#767676">main</tspan><tspan x="482.0" fill="#767676">claude-opus-5-5</tspan><tspan x="608.0" fill="#767676"> · </tspan><tspan x="633.2" fill="#c8c8c8">high</tspan><tspan x="692.0" fill="#767676">○ 8%</tspan></text>
+<text y="123"><tspan x="20.0" fill="#767676">50% and up</tspan></text>
+<text y="145"><tspan x="20.0" fill="#9e9e9e">pnp</tspan><tspan x="45.2" fill="#767676"> · </tspan><tspan x="70.4" fill="#767676">main</tspan><tspan x="473.6" fill="#767676">claude-opus-5-5</tspan><tspan x="599.6" fill="#767676"> · </tspan><tspan x="624.8" fill="#c8c8c8">high</tspan><tspan x="683.6" fill="#f2d48b">◑ 58%</tspan></text>
+<text y="177"><tspan x="20.0" fill="#767676">80% and up</tspan></text>
+<text y="199"><tspan x="20.0" fill="#9e9e9e">pnp</tspan><tspan x="45.2" fill="#767676"> · </tspan><tspan x="70.4" fill="#767676">feature/auth</tspan><tspan x="473.6" fill="#767676">claude-opus-5-5</tspan><tspan x="599.6" fill="#767676"> · </tspan><tspan x="624.8" fill="#c8c8c8">high</tspan><tspan x="683.6" fill="#f28b82">◕ 87%</tspan></text>
+</svg>

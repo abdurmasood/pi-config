@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Type-check every extension and run tests/*.test.ts against the installed pi version.
 #
-#   ./scripts/check.sh
+#   ./scripts/check.sh             type-check + tests
+#   ./scripts/check.sh --prepare   only build the scratch copy and print its path (used by previews.sh)
 #
 # Works in a scratch copy under ~/.cache/pi-config-check so nothing (node_modules etc.)
 # is ever created inside the repo; pi must load host packages through its own mapping.
@@ -36,8 +37,7 @@ rm -rf "$WORK"
 mkdir -p "$WORK/node_modules/@earendil-works"
 for p in "$PI_NM"/@earendil-works/*; do ln -s "$p" "$WORK/node_modules/@earendil-works/$(basename "$p")"; done
 ln -s "$CACHE/node_modules/@types" "$WORK/node_modules/@types"
-cp -R "$ROOT/extensions" "$WORK/extensions"
-[ -d "$ROOT/tests" ] && cp -R "$ROOT/tests" "$WORK/tests"
+for d in extensions tests scripts themes; do [ -d "$ROOT/$d" ] && cp -R "$ROOT/$d" "$WORK/$d"; done
 
 echo '{"type":"module"}' > "$WORK/package.json"
 cat > "$WORK/tsconfig.json" <<'EOF'
@@ -53,9 +53,11 @@ cat > "$WORK/tsconfig.json" <<'EOF'
     "preserveSymlinks": true,
     "types": ["node"]
   },
-  "include": ["extensions/**/*.ts", "tests/**/*.ts"]
+  "include": ["extensions/**/*.ts", "tests/**/*.ts", "scripts/**/*.ts"]
 }
 EOF
+
+if [ "${1:-}" = "--prepare" ]; then echo "$WORK"; exit 0; fi
 
 echo "Type-checking (pi $(basename "$(dirname "$PI_NM")"))…"
 if ! (cd "$WORK" && "$CACHE/node_modules/.bin/tsc" -p . 2>&1 | sed "s#^#  #"; exit "${PIPESTATUS[0]}"); then
