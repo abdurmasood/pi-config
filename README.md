@@ -2,11 +2,15 @@
   <img src="docs/banner.svg" alt="π pi-config: my setup for the pi coding agent" width="100%">
 </p>
 
+## Install
+
+Needs [pi](https://pi.dev). Then run:
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/abdurmasood/pi-config/main/install.sh | bash
 ```
 
-Run again to update. Your existing settings and keybindings are never overwritten.
+Run the same command again to update. Your existing settings and keybindings are never overwritten.
 
 ## Ask mode · `⇧Tab`
 
