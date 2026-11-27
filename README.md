@@ -1,6 +1,6 @@
-# pi-config
-
-My [pi](https://pi.dev) setup.
+<p align="center">
+  <img src="docs/banner.svg" alt="π pi-config: my setup for the pi coding agent" width="100%">
+</p>
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/abdurmasood/pi-config/main/install.sh | bash

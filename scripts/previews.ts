@@ -198,4 +198,37 @@ mkdirSync(OUT, { recursive: true });
 	writeFileSync(join(OUT, "ask-mode.svg"), svg("⇧Tab  ask mode", COLS, rows));
 }
 
-console.log(`Wrote ${OUT}/footer.svg, context.svg, ask-mode.svg`);
+// 4. Banner (README header)
+{
+	const width = Math.round(COLS * CW + PAD * 2);
+	const height = 210;
+	const statusY = height - 46;
+	const status = footer({ pct: 23, branch: "main", statuses: [["ask-mode", theme.fg("warning", "◉ ask")]] }).render(COLS)[0];
+	const statusSpans = parseAnsi(status)
+		.filter((s) => s.text.trim())
+		.map((s) => `<tspan x="${(PAD + s.col * CW).toFixed(1)}" fill="${s.fg}">${esc(s.text)}</tspan>`)
+		.join("");
+	const banner = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+<style>
+text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;white-space:pre}
+.cursor{animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+</style>
+<defs>
+<radialGradient id="glow" cx="50%" cy="38%" r="55%">
+<stop offset="0%" stop-color="${color("accent")}" stop-opacity="0.13"/>
+<stop offset="100%" stop-color="${color("accent")}" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="${width}" height="${height}" rx="12" fill="${BG}" stroke="#2a2a2a"/>
+<rect width="${width}" height="${statusY - 16}" fill="url(#glow)"/>
+<text x="${width / 2}" y="92" text-anchor="middle" style="font-size:46px;font-weight:600;letter-spacing:-1px"><tspan fill="${color("accent")}">π</tspan><tspan fill="${color("mdHeading")}"> pi-config</tspan><tspan class="cursor" fill="${color("accent")}">▍</tspan></text>
+<text x="${width / 2}" y="128" text-anchor="middle" style="font-size:15px" fill="${color("muted")}">my setup for the pi coding agent</text>
+<line x1="0" y1="${statusY - 16}" x2="${width}" y2="${statusY - 16}" stroke="${color("borderMuted")}"/>
+<text y="${statusY + 15}" style="font-size:14px">${statusSpans}</text>
+</svg>
+`;
+	writeFileSync(join(OUT, "banner.svg"), banner);
+}
+
+console.log(`Wrote ${OUT}/footer.svg, context.svg, ask-mode.svg, banner.svg`);
